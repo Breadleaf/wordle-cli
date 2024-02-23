@@ -20,15 +20,15 @@ if [ $# -gt 1 ]; then
 fi
 
 case $1 in
-	"RUN")
-		python3 wordle.py;
+	"RUN" | "run" | "R" | "r" | "--run" | "-r")
+		python3 /opt/wordle/wordle.py;
 		exit "$?";
 		;;
-	"DEBUG")
+	"DEBUG" | "debug" | "D" | "d" | "--debug" | "-d")
 		python3 wordle.py DEBUG;
 		exit "$?";
 		;;
-	"HELP")
+	"HELP" | "help" | "H" | "h" | "--help" | "-h")
 		echo "$help_text";
 		exit 0;
 		;;
